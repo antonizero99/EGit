@@ -16,6 +16,7 @@ abstract public class DA {
 	public static void main(String arg[]) {
 //		DA da = new DA();
 //		da.dataAccess();
+		//comment added
 	}
 
 	private void initialConnection() throws SQLException, ClassNotFoundException{
