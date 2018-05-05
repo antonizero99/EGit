@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://java.sun.com/xml/ns/javaee" xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_3_0.xsd" id="WebApp_ID" version="3.0">
+  <display-name>EHomeShopper_struts</display-name>
+
+<welcome-file-list>
+	<welcome-file>/ProductForm.jsp</welcome-file>
+</welcome-file-list>
+
+<filter>
+	<filter-name>struts2</filter-name>
+	<filter-class>org.apache.struts2.dispatcher.filter.StrutsPrepareAndExecuteFilter</filter-class>
+</filter>
+
+<filter-mapping>
+	<filter-name>struts2</filter-name>
+	<url-pattern>/*</url-pattern>
+</filter-mapping>
+
+<security-constraint>
+	<web-resource-collection>
+		<web-resource-name>JSPs</web-resource-name>
+		<url-pattern>/user/*</url-pattern>
+	</web-resource-collection>
+	<auth-constraint/>
+</security-constraint>
+
+<login-config>
+	<auth-method>BASIC</auth-method>
+</login-config>
+</web-app>
